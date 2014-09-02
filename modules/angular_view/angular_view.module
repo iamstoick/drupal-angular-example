@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * Cats module
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function angular_view_menu() {
+  $items['nodes/view/article'] = array(
+    'title' => 'Articles',
+    'page callback' => 'angular_view_build_page',
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+
+/**
+ * Implements hook_theme().
+ *
+ * The tpl file is where we display the content in Angular way.
+ */
+function angular_view_theme() {
+  return array(
+    'all_articles' => array(
+      'template' => 'all-articles',
+    ),
+  );
+}
+
+
+/**
+ * Build the page.
+ */
+function angular_view_build_page() {
+  // Make sure angularjs library is present when we bootstrap this page.
+  drupal_add_library('angularjs', 'angularjs');
+  // Bootstrap the angular-article-view.js when the the callback is called.
+  drupal_add_js(drupal_get_path('module', 'angular_view') . '/js/angular-article-view.js');
+
+  return theme('all_articles');
+}

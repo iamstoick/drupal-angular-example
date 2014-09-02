@@ -1,0 +1,6 @@
+name = Angularify
+description = Displays articles in Angular way
+version = 7.x-1.0
+core = 7.x
+dependencies[] = angularjs
+dependencies[] = json_article
