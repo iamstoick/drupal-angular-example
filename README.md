@@ -8,6 +8,8 @@ A simple modules that uses Angularjs to display article content type.
 1. Install `Angularify` module.
 2. Revert json_article feature. `drush fr json_article -y`
 
+After installation visit the demo page here `$base_url` + `nodes/view/article`.
+
 ##Notes
 
 1. Make sure that you have contents on your `Article` content type with `title`,
