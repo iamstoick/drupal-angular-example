@@ -18,7 +18,6 @@ A simple modules that uses Angularjs to display article content type.
 
 ##Dependencies
 
-1. (Angularjs module)[https://drupal.org/project/angularjs]
-2. (Libraries)[https://drupal.org/project/libraries]
-3. (Views)[https://drupal.org/project/views]
-
+1. [Angularjs module](https://drupal.org/project/angularjs)
+2. [Libraries](https://drupal.org/project/libraries)
+3. [Views](https://drupal.org/project/views)
