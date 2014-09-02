@@ -23,3 +23,4 @@ After installation visit the demo page here `$base_url` + `nodes/view/article`.
 1. [Angularjs module](https://drupal.org/project/angularjs)
 2. [Libraries](https://drupal.org/project/libraries)
 3. [Views](https://drupal.org/project/views)
+4. [Views Datasource](https://drupal.org/project/views_datasource)
