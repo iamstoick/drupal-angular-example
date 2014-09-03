@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Cats module
+ * Angularify module file.
  */
 
 /**
@@ -36,10 +36,22 @@ function angular_view_theme() {
  * Build the page.
  */
 function angular_view_build_page() {
+  $module_path = drupal_get_path('module', 'angular_view');
   // Make sure angularjs library is present when we bootstrap this page.
   drupal_add_library('angularjs', 'angularjs');
+  drupal_add_js($module_path . '/js/angular-refresh/angular-refresh.js', array(
+    'scope' => 'footer',
+    'group' => JS_THEME,
+    'every_page' => TRUE,
+    'weight' => -2,
+  ));
   // Bootstrap the angular-article-view.js when the the callback is called.
-  drupal_add_js(drupal_get_path('module', 'angular_view') . '/js/angular-article-view.js');
+  drupal_add_js($module_path . '/js/angular-article-view.js', array(
+    'scope' => 'footer',
+    'group' => JS_THEME,
+    'every_page' => TRUE,
+    'weight' => -3,
+  ));
 
   return theme('all_articles');
 }
